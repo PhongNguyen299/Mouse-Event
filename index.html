@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <form>
+        <img id="myImage" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" style = "width: 30%"/>
+        <p>Click button below to move the image to right</p>
+        <input id="click" type="button" value="Click Me" />
+    </form>
+  <script>
+    const imgObj = document.getElementById("myImage");
+    const click = document.getElementById("click");
+
+    function init() {
+        imgObj.style.position = "relative";
+        imgObj.style.left = "0px";
+    }
+
+    function moveRight(){
+        imgObj.style.left = parseInt(imgObj.style.left) +10 +"px";
+    }
+    window.init();
+    click.addEventListener('click',moveRight)
+  </script>
+</body>
+</html>
